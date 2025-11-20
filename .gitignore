@@ -1,0 +1,54 @@
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+*.log
+local_settings.py
+
+# Docker
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+/backups/*.sql
+/backups/*.sql.gz
+
+# Logs
+/logs/*.log
+
+# Certificates
+/certbot/conf/
+/certbot/www/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
