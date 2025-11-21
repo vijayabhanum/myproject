@@ -8,3 +8,4 @@ have to see .........
 # added docker image error in build- same
 # docker ref edited
 # small mistake in Docker file fixed
+# forgot to create appuser LOL 

@@ -30,6 +30,8 @@ COPY . /app/
 
 RUN mkdir -p /app/static /app/media /app/logs
 
+RUN adduser -D appuser
+
 RUN chown -R appuser:appuser /app
 
 USER appuser
