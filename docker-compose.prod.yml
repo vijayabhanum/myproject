@@ -67,8 +67,8 @@ services:
     restart: always
 
     volumes:
-      - static_volumes:/app/static
-      - media_volumes:/app/media
+      - static_volume:/app/static
+      - media_volume:/app/media
       - ./logs:/app/logs
     
     env_file:

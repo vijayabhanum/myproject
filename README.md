@@ -11,3 +11,4 @@ have to see .........
 # forgot to create appuser LOL 
 # checked for image build loclly its fine now 
 # nginx docker file spelling mistake
+# i used volumes instead of volume in docker compose prod
