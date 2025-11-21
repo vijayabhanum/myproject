@@ -9,3 +9,4 @@ have to see .........
 # docker ref edited
 # small mistake in Docker file fixed
 # forgot to create appuser LOL 
+# checked for image build loclly its fine now 

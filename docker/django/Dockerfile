@@ -1,4 +1,4 @@
-FROM python:3.11-slim as base
+FROM python:3.11-slim AS base
 
 ENV PYTHONDONTWRITEBYTECODE=1
 
@@ -30,7 +30,7 @@ COPY . /app/
 
 RUN mkdir -p /app/static /app/media /app/logs
 
-RUN adduser -D appuser
+RUN adduser --disabled-password --gecos '' appuser
 
 RUN chown -R appuser:appuser /app
 
