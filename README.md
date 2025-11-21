@@ -5,3 +5,4 @@ have to see .........
 # made some github errors and fixed
 ## modified deploy file to make all actions work
 ## removed if statement have to see
+# added docker image error in build
