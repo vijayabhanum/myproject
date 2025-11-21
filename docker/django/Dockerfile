@@ -34,7 +34,7 @@ RUN chown -R appuser:appuser /app
 
 USER appuser
 
-COPY --chow=appuser:appuser scripts/entrypoint.sh /app/
+COPY --chown=appuser:appuser scripts/entrypoint.sh /app/
 
 RUN chmod +x /app/entrypoint.sh
 

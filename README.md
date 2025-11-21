@@ -7,3 +7,4 @@ have to see .........
 ## removed if statement have to see
 # added docker image error in build- same
 # docker ref edited
+# small mistake in Docker file fixed
