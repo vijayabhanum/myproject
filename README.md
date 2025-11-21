@@ -6,3 +6,4 @@ have to see .........
 ## modified deploy file to make all actions work
 ## removed if statement have to see
 # added docker image error in build- same
+# docker ref edited

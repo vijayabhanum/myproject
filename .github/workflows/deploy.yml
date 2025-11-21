@@ -153,8 +153,8 @@ jobs:
         file: docker/django/Dockerfile
         push: true
         tags: ${{ steps.meta-django.outputs.tags }}
-        cache-from: type=registry, ref=${{ secrets.DOCKER_USERNAME}}/myproject-web:latest
-        cache-to: type=inline
+        cache-from: type=registry,ref=${{secrets.DOCKER_USERNAME}}/myproject-web:latest
+        cache-to: type=registry,mode=max,ref=${{secrets.DOCKER_USERNAME}}/myproject-web:latest
 
     - name: Build and push Nginx image
       uses: docker/build-push-action@v4
