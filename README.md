@@ -16,3 +16,4 @@ have to see .........
 # volume name chanded 
 # added env file variable in docker yml
 # added backup.sh which is missed
+# fixed entry point 
