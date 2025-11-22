@@ -60,14 +60,7 @@ if os.environ.get('REDIS_URL'):
             'TIMEOUT': 300,  # 5 minutes default
         }
     }
-    
-    # Cache templates
-    TEMPLATES[0]['OPTIONS']['loaders'] = [
-        ('django.template.loaders.cached.Loader', [
-            'django.template.loaders.filesystem.Loader',
-            'django.template.loaders.app_directories.Loader',
-        ]),
-    ]
+
     
     # Use Redis for sessions
     SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
