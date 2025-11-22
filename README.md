@@ -12,3 +12,4 @@ have to see .........
 # checked for image build loclly its fine now 
 # nginx docker file spelling mistake
 # i used volumes instead of volume in docker compose prod
+# use docker compose not docker-compose

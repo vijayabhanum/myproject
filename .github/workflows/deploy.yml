@@ -182,19 +182,19 @@ jobs:
 
           git pull origin main
           
-          docker-compose -f docker-compose.prod.yml pull
+          docker compose -f docker-compose.prod.yml pull
 
-          docker-compose -f docker-compose.prod.yml exec -T postgres /scripts/backup_db.sh
+          docker compose -f docker-compose.prod.yml exec -T postgres /scripts/backup_db.sh
 
-          docker-compose -f docker-compose.prod.yml down
+          docker compose -f docker-compose.prod.yml down
 
-          docker-compose -f docker-compose.prod.yml up -d --build
+          docker compose -f docker-compose.prod.yml up -d --build
 
           sleep 10
 
-          docker-compose -f docker-compose.prod.yml exec -T web python manage.py migrate --noinput
+          docker compose -f docker-compose.prod.yml exec -T web python manage.py migrate --noinput
 
-          docker-compose -f docker-compose.prod.yml exec -T web python manage.py collectstatic --noinput
+          docker compose -f docker-compose.prod.yml exec -T web python manage.py collectstatic --noinput
 
           docker system prune -f
 
