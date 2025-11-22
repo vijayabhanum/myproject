@@ -15,3 +15,4 @@ have to see .........
 # use docker compose not docker-compose
 # volume name chanded 
 # added env file variable in docker yml
+# added backup.sh which is missed
