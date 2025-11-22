@@ -14,3 +14,4 @@ have to see .........
 # i used volumes instead of volume in docker compose prod
 # use docker compose not docker-compose
 # volume name chanded 
+# added env file variable in docker yml
