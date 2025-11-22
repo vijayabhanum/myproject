@@ -10,8 +10,7 @@ done
 
 echo "Postgresql started succesfully!"
 
-until PGPASSWORD=$DB_PASSWORD psql -h "$DB_HOST" -U "$DB_USER" -d
-"$DB_NAME" -c '\q'; do
+until PGPASSWORD=$DB_PASSWORD psql -h "$DB_HOST" -U "$DB_USER" -d "$DB_NAME" -c '\q'; do
   echo "postgresql is unavailable -retrying...."
   sleep 1
 done
