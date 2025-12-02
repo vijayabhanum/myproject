@@ -23,7 +23,7 @@ COPY . .
 
 RUN chmod +x scripts/entrypoint.sh
 
-RUN mkdir -p /staticfiles /media /logs
+RUN mkdir -p /app/staticfiles /app/media
 
 RUN useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app
