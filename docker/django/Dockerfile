@@ -23,12 +23,8 @@ COPY . .
 
 RUN chmod +x scripts/entrypoint.sh
 
-RUN mkdir -p /app/staticfiles /app/media
-
 RUN useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app
-
-USER appuser
 
 EXPOSE 8000
 

@@ -7,6 +7,13 @@ echo "======================================"
 echo "Djano container starting..."
 echo ""
 
+echo "Fixing permissions for mounted volumes.."
+mkdir -p /app/staticfiles /app/media /app/logs
+chown -R appuser:appuser /app/staticfiles /app/media /app/logs
+chmod -R 755 /app/staticfiles /app/media /app/logs
+echo "Permissions fixed!"
+
+
 echo "Waiting for PostgreSQL..."
 while ! nc -z $DB_HOST $DB_PORT; do
     sleep 0.1
@@ -25,12 +32,18 @@ python manage.py collectstatic --noinput --clear
 echo "Static files collected!"
 
 echo ""
+echo "Ensuring final permissions..."
+chown -R appuser:appuser /app/logs
+echo "✓ Final permissions set!"
+
+
+echo ""
 echo "=========================================="
 echo "Starting Gunicorn server..."
 echo "=========================================="
 echo ""
 
-exec gunicorn myproject.wsgi:application \
+exec su appuser -c "gunicorn myproject.wsgi:application \
     --bind 0.0.0.0:8000 \
     --workers ${GUNICORN_WORKERS:-3} \
     --threads ${GUNICORN_THREADS:-2} \
@@ -43,4 +56,4 @@ exec gunicorn myproject.wsgi:application \
     --log-level info \
     --timeout ${GUNICORN_TIMEOUT:-120} \
     --graceful-timeout 30 \
-    --keep-alive 5
+    --keep-alive 5"
