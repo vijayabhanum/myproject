@@ -28,6 +28,9 @@ RUN mkdir -p staticfiles media logs
 RUN useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app
 
+RUN chown -R appuser:appuser /app/logs && \
+    chown -R 755 /app/logs
+
 USER appuser
 
 EXPOSE 8000
