@@ -1,0 +1,59 @@
+# Git
+.git
+.gitignore
+
+# Docker
+docker-compose*.yml
+Dockerfile
+.dockerignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+db.sqlite3
+*.sqlite3
+
+# Environment
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Backups
+backups/
+
+# Static files (will be collected in container)
+staticfiles/
+
+# Certificates
+certbot/
+
+# Documentation
+README.md
+*.md
